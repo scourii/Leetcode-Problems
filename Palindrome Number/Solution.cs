@@ -10,7 +10,7 @@ public class Solution {
         int Solution = 0; // Sets new variable called Solution to 0.
         int PlaceInList = NumberList.Count-1; // The amount of numbers in NumberList - 1.
 
-        while(PlaceInList < Solution){
+        while(Solution < PlaceInList){
             if (NumberList[Solution++] != NumberList[PlaceInList--])
                 return false;
         }
