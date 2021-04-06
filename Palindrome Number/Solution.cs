@@ -11,7 +11,7 @@ public class Solution {
         int PlaceInList = NumberList.Count-1; // The amount of numbers in NumberList - 1.
 
         while(PlaceInList < Solution){
-            if (NumberList[Solution++] != NumberList[PlaceInList])
+            if (NumberList[Solution++] != NumberList[PlaceInList--])
                 return false;
         }
         return true;
