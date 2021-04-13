@@ -9,19 +9,28 @@ public class Solution {
             int k = nums.Length - 1; // Previous iteration
             while (j < k)
             {
-                int sum = nums[i] + nums[j] + nums[k]; // Sum is the total of all the 3 iterations of the list.
+                // Sum is the total of all the 3 iterations of the list.
+                
+                int sum = nums[i] + nums[j] + nums[k]; 
                 
                 if (sum == target)
                     return sum;
-                if (sum < target) // Continues to next iteration if all the sums is still less than the target.
+                // Continues to next iteration if all the sums is still less than the target.
+                if (sum < target) 
                     j++;
-                else // Goes to the previous iteration if sum is greater than the target.
+                // Goes to the previous iteration if sum is greater than the target.
+                else 
                     k--;
                 
-                int difference = Math.Abs(sum - target); // Converts all the values in the list to ints and subtracts by whatever the target value is.
+                // Converts all the values in the list to ints and subtracts by whatever the target value is.
+                
+                int difference = Math.Abs(sum - target);
+                
+                //Minimum difference is lowered to match the same value of difference.
+                
                 if (difference < minimumDifference)
                 {
-                    minimumDifference = difference; //Minimum difference is lowered to match the same value of difference.
+                    minimumDifference = difference; 
                     closest = sum;
                 }
             }
